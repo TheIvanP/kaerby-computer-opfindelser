@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>computere_Kærby_temauge.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="computere-og-opfindelser">Computere og opfindelser</h1>
+<span style="color:white">
+<p>Hej, jeg hedder Ivan, er <code>far til Ivy og Freyja i 1b</code> og jeg vil gerne fortælle jer lidt om hvem der opfandt computeren og hvad den er lavet af. Her er min email hvis der er nogen der vil spørge om noget: <code>ivanpedersen79@gmail.com</code>
+</span></p>
+<h2 id="hvad-er-en-computer">Hvad er en computer?</h2>
+<hr>
+<span style="color:white">
+<p>En computer er en maskine der kan mange forskellige ting. I gamle dage var deres formål at <code>gøre  matematik lettere.</code></p>
+<p>Måske ville de tage lang tid og være lidt kedeligt at regne hele formlen ud der starter med:</p>
+<pre class="hljs"><code><div>(1  - 1 / 3 + 1 / 5 - 1 / 7 + 1 / 9 - 1 / 11 + 1 / 13 ) x 4
+</div></code></pre>
+<p>så en computer kan hjælpe med at finde resultatet meget hurtigere:
+<code>3,2837</code> (og eventuelt 3.14)</p>
+<p><code>Computere kan</code> meget andet nu, som f.eks. hælpe med at <code>skrive, spille spil, se videoer og tale med folk</code>. Moderne computere har altid været brugt til spil. Her er et af de første:</p>
+<p><img src="2023-01-27-10-47-22.png" alt="">
+<code>Spacewar - MIT, Amerika, 1962</code></p>
+<p>Computere kan være <code>store eller små</code> og kan bestå af:</p>
+<ul>
+<li>
+<p>Et <code>tastatur</code> og en mus for at give instruktioner. F.eks. vores lange formel ovenfor.</p>
+</li>
+<li>
+<p>En <code>skærm</code> for at vise resultatet.</p>
+</li>
+<li>
+<p><code>Processor</code>: en meget hurtig og lille lommeregner der er &quot;<code>hjernen</code>&quot; der kan udregne et resultat. Den hedder også en mikrochip eller CPU.</p>
+</li>
+</ul>
+<p>Computere startede som kæmpe store lommeregnere - lad os gå tilbage i tiden og møde dem der skabte computerne og brugte dem til banebrydende opfindelser.</p>
+<span style="color:black">
+<h1 id="computerens-historie">Computerens historie</h1>
+<h2 id="200-%C3%A5r-siden-ada-lovelace-charles-babbage-og-den-f%C3%B8rste-regnemaskine"><strong>200 år siden</strong>: Ada Lovelace, Charles Babbage og den første regnemaskine</h2>
+<span style="color:white">
+<p><img src="2023-01-27-08-50-46.png" alt="">
+<code>Differens Maskinen</code></p>
+<p>Ada havde rigtigt mange ideer til skøre maskiner, f.eks. nogle der kunne flyve. Hendes mor ville også gerne have hun lavede sine lektier, specielt matemetik. Hun endte med at elske matematik og læste en masse om det. Derfor hørte hun om Charles Babbage, der havde <code>opfundet en maskine</code> så man kunne <code>regne meget hurtigere</code> end i hovedet og på parpir. Den hed <code>differens maskinen</code> og skulle laves af mange tons af metal og tusindvis af tandhul. Ada var fascineret brugte mange timer på at studere differens maskinen. I 1843 <code>opfandt Ada</code> ideen om at ændre funktionen af den med <code>specielle instruktioner</code> skrevet på hul-kort. Ada Lovelace var den <code>første computer programmør</code>.</p>
+<hr>
+<span style="color:black">
+<h2 id="80-%C3%A5r-siden---alan-turing-wrens-og-hemmelige-koder"><strong>80 år siden</strong> - Alan Turing, Wrens og hemmelige koder</h2>
+<span style="color:white">
+<p>Alan Turing var en <code>opfinder og matematiker</code>, der levede for mange år siden. Under <code>2. verdenskrig</code> arbejdede han for den britiske regering med at <code>læse hemmelige beskeder</code> fra Nazisterne der var fjenden.
+<img src="2023-01-29-21-25-32.png" alt=""></p>
+<p>Han gjorde dette ved at designe en stor maskine kaldet <code>Bombe</code>, der kunne <code>udføre beregninger meget hurtigere</code> end en person. Bombe var <code>så stor, at den fyldte hele et rum</code>, var lavet af bronzefarvet metal og havde en masse elektonik og hjul der kunen rotere.
+<img src="2023-01-29-21-52-32.png" alt=""></p>
+<p>Alan havde hjælp af mange mennesker til sit arbede omkring Bombe, deriblandt nogle specielle damer kaldet <code>Wrens der programmerede Bombe</code> for at løse koderne. De arbejdede sammen for at hjælpe regeringen med at <code>finde ud af, hvad fjenden havde planlagt</code>. Ved at bruge teknologi og deres intelligens redede de <code>mange tusind liv</code> under 2. verdenskrig. Dette var med til at vinde krigen.</p>
+<hr>
+<span style="color:black">
+<h2 id="50-%C3%A5r-siden-magaret-hamilton-og-m%C3%A5nen">50 år siden: Magaret Hamilton og Månen</h2>
+<span style="color:white">
+<p>Den Amerikanske Apollo-mission sendte de første <code>mennesker til Månen</code>. De havde en computer på størrelse med et skab.</p>
+<p><img src="2023-01-27-11-59-04.png" alt=""></p>
+<p><code>Margaret Hamilton</code> var en datalog og <code>chef</code> for det hold der <code>udviklede softwaren</code>, som <code>styrede rumfartøjet</code> og sørgede for, at det fungerede korrekt. En dag tog hun sin datter med på arbejde og de legede astronaut. Datteren og<code>trykkede på alle knapperne</code> og hjalp med at finde en <code>vigtig fejl</code> i programmet some Margaret så <code>kunne reperere</code>. Det er stadigt meget vigtigt idag at <code>teste</code> programmer for fejl.</p>
+<p>På grund af hendes arbejde var <code>missionen en success</code> og rumfartøjet Eagle kunne både <code>lande sikkert</code> på månen med de <code>3 astronauter</code> og få dem hjem til jorden igen. Margaret Hamilton er en af de vigtigste personer i datalogiens verden og mange af hendes <code>opfindelser bliver stadig brugt idag</code> og findes i computer programmer der skal være <code>sikre</code> som f.eks. i en <code>flyvemaskine</code>.</p>
+<p>Her er hun med alle <code>programmerne</code> til Apollo missionen. <code>Hvor mange sider tror i der er?</code>(14.500 sider):
+<img src="2023-01-27-10-42-10.png" alt=""></p>
+<hr>
+<span style="color:black">
+<h2 id="2-%C3%A5r-siden-katie-bouman-og-det-sorte-hul">2 år siden: Katie Bouman og det sorte hul.</h2>
+<span style="color:white">
+<p>Katie Bouman er en datalog der arbejder med at <code>lave billeder på computere</code>. Hun gjorde det muligt for forskere at se et billede af et sort hul for første gang. <code>Et sort hul</code> er et sted i rummet, hvor tyngdekraften er så stærk, at <code>ingenting, ikke engang lys</code>, kan undslippe det.
+Her er et billede hvor hun ser resultatet af sit arbejde for første gang. <code>Hvordan ser hun ud?</code>
+<img src="2023-01-29-20-08-17.png" alt=""></p>
+<p>Katie og hendes venner <code>arbejde sammen med astronomer</code> over hele verden og samlede målinger fra rummet sit computer program. Hun fik en asteroide opkaldt efter sig, 291387 Katiebouman.</p>
+<p><img src="2023-01-29-20-44-50.png" alt=""></p>
+<p>Dette program kunne <code>beregne verdens første billede</code> af et sort hul ved at samle et slags puslespil af alle astronomernes data.
+<img src="2023-01-29-20-43-03.png" alt=""></p>
+<p>Dette var en meget vigtig opdagelse, fordi det <code>hjalp forskerne med at forstå</code> mere om sorte huller og universet.</p>
+<p>Så der er mange mennesker der har hjulpet med til at opfine selve computeren - og andre der har opfundet programmerne der førte til nye opfindelser der har <code>ændret vores syn på hele universet</code>.</p>
+<pre class="hljs"><code><div>
+
+
+
+</div></code></pre>
+<span style="color:black">
+<h1 id="hvad-er-en-computer-lavet-af">Hvad er en computer lavet af?</h1>
+<span style="color:white">
+<p>Lad os finde ud af hvad en computer er lavet af. Det vigtigste er nok <strong>processoren</strong>, eller <code>'hjernen'</code> så lad os kigge på den. En processor heder også en CPU eller mikrochip.</p>
+<p>Der er processorer i mange ting fordi de <code>er blevet små,</code> bedre og bruger <code>mindre electicitet</code>. De er i alt fra biler til vaskemaskiner og ure og <code>hjælper med at løse mange problemer</code> som f.eks. avancerede matematiske udregninger. De samme computere kan bruges til sjove ting som f.eks. <code>Minecraft</code>.</p>
+<p><code>Processoren</code> er en lille <code>sort firkant</code>. Det sorte er bare et <code>låg</code> der beskytter det der er indeni.</p>
+<p><img src="2023-01-26-11-25-51.png" alt=""></p>
+<p>Hvis vi <code>åbner</code> det sorte låg af og ser <code>inden i processoren</code> ser det lidt mere spændende ud.</p>
+<p><img src="2023-01-27-11-52-30.png" alt=""></p>
+<p>Processoren er mest <code>lavet af silikum skiver og kobber linier</code>.</p>
+<span style="color:black">
+<h2 id="hvad-er-silicum">Hvad er silicum?</h2>
+<span style="color:white">
+<p>Silicum findes i <code>sand</code>:
+<img src="2023-01-30-15-54-23.png" alt=""></p>
+<p>Det er et mineral, et <code>grundstof</code>.
+Hvis vi kigger på det i et <code>mikroskop</code> kan vi se de ligner krystaller. Det er fordi der er silikum i.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="2023-01-26-12-09-52.png" alt=""></td>
+<td><img src="2023-01-26-09-14-20.png" alt=""></td>
+</tr>
+</tbody>
+</table>
+<span style="color:black">
+<h2 id="varme-krystaller">Varme krystaller</h2>
+<span style="color:white">
+<p>Specielt sand bruges til processorer og vi starter med at <code>smelte det</code>. Pas på - det er varmt!
+(ca <code>2000 grader</code> celcius!).
+Kombinationen af varmen og processen laver sandet til en <code>krystal</code>, det hedder en
+<em>Czochralski process</em>.
+Vi kan <code>lave vores egen krystal</code> ved at gro den med krea-kits. <code>Er der nogen der har prøvet det?</code>
+Krystallen til en chip ligner lidt en pølse. Den skærer vi i <code>skiver</code></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="2023-01-26-12-30-41.png" alt=""></td>
+<td><img src="2023-01-26-09-20-44.png" alt=""></td>
+</tr>
+<tr>
+<td><img src="2023-01-26-09-25-35.png" alt=""></td>
+<td><img src="2023-01-26-12-34-09.png" alt=""></td>
+</tr>
+</tbody>
+</table>
+<span style="color:black">
+<h2 id="meget-sm%C3%A5-kontakter">Meget små kontakter</h2>
+<span style="color:white">
+<p>Derefter bruger de specielle værktøjer til at skære skiven i <code>meget små stykker</code>, kaldet <code>transistorer</code>. Transistorer er som <code>små kontakter</code>, der kan tænde og slukke for strøm. Der er mange af dem i en processor - ca. <code>17 milliarder!</code> Og de er virkelig små - ca. <code>7 nano meter</code>. Det er en <code>million-del af en milimenter</code>. Et <code>hår er 70.000 nano meter bredt</code> - så der kan ligge <code>10.000 af deher små kontakter på tværs af et hår</code>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="2023-01-30-16-52-55.png" alt=""></td>
+<td><img src="2023-01-26-12-23-08.png" alt=""></td>
+</tr>
+</tbody>
+</table>
+<span style="color:black">
+<h2 id="elektriske-veje">Elektriske veje</h2>
+<span style="color:white">
+<p>Nu skal vi bruger <code>metallet kobber</code>. Kobber er god til at lede <code>electricitet</code>. Derfor er det også <code>indeni ledninger</code>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="2023-01-26-12-44-15.png" alt=""></td>
+<td><img src="2023-01-30-19-39-13.png" alt=""></td>
+</tr>
+</tbody>
+</table>
+<p>Vi bruger endnu mindre værktøjer til at <code>tegne kobber-linjer</code> på silicum'et. Disse linjer er en slags <code>&quot;veje&quot; for strøm  at rejse på</code>.</p>
+<p><img src="2023-01-30-16-34-03.png" alt=""></p>
+<p>Designet af disse 'veje' er vigtigt for at processoren kan blive <code>lille</code>, bruge <code>minimalt strøm</code> og vise dit favourit spil <code>hurtigt</code>.</p>
+<p>Til sidst lægger vi et <code>beskyttende lag</code> på mikrochippen der gør den ligner en sort firkant. Så er mikrochippet klar til at blive brugt i enheder som telefoner og computere.</p>
+<p><img src="2023-01-30-16-38-22.png" alt=""></p>
+<span style="color:white">
+<span style="color:black">
+<h1 id="til-slut">Til slut</h1>
+<span style="color:white">
+<p>Det firma jeg arbejder for designer processorer. <code>Vores opfindelse</code> er et design til processorer der er så små at vi kan have en <code>computer i lommen</code> - en smartphone.</p>
+<p>En computer er rigtigt mange forskellige opfindelser lavet at mange <code>dygtige personer</code>. Områder som <code>kemi, elektronik og mekanik</code> har været vigtige for a bygge computeren . Programmerne der styrer computeren er ligeså vigtige og bygger på områder som <code>logik, sprog og matematik</code>.</p>
+<p><code>Alle kan lære at skrive et computer program</code> ved at bruge f.eks. Scratch, Minecraft Education eller læse bøger - det vigtigste er at vi vil lære noget nyt og har <code>kreative ideer</code> til opfindelser.</p>
+<p>Mange opfindelser er gort ved hjælp af computere lad os tænke på hvorden vi <code>hjælper hinanden og vores planet</code> med de ting vi opfinder.</p>
+<p><img src="2023-01-30-22-20-19.png" alt=""></p>
+<span style="color:black">
+<h2 id="mange-tak">Mange tak!</h2>
+<pre class="hljs"><code><div>Materiale liste:
+
+Raspberry pi
+Tablet 
+Sand i kolbe
+Ledning / kobber
+</div></code></pre>
+
+</body>
+</html>
