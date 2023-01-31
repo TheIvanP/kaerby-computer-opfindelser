@@ -2,14 +2,14 @@
 
 <span style="color:white">
 
-Hej, jeg hedder Ivan, er `far til Ivy og Freyja i 1b` og jeg vil gerne fortælle jer lidt om hvem der opfandt computeren og hvad den er lavet af. Her er min email hvis der er nogen der vil spørge om noget: `ivanpedersen79@gmail.com`
+Hej, jeg hedder `Ivan`, er `far til Ivy og Freyja i 1b` og jeg vil gerne fortælle jer lidt om hvem der `opfandt computeren og hvad den er lavet af`. Her er min email hvis der er nogen der vil spørge om noget: `ivanpedersen79@gmail.com`
 </span>
 
 ## Hvad er en computer?
 ---
 <span style="color:white">
 
-En computer er en maskine der kan mange forskellige ting. I gamle dage var deres formål at `gøre  matematik lettere.`
+`En computer er en maskine` der kan mange forskellige ting. Den started som en maskine der kan `gøre  matematik lettere.` og nu er den
 
 Måske ville de tage lang tid og være lidt kedeligt at regne hele formlen ud der starter med: 
 
@@ -40,14 +40,20 @@ Computere startede som kæmpe store lommeregnere - lad os gå tilbage i tiden og
 
 # Computerens historie
 
-## **200 år siden**: Ada Lovelace, Charles Babbage og den første regnemaskine
+## **180 år siden**: Ada Lovelace, Charles Babbage og den første regnemaskine
 
 <span style="color:white">
 
 ![](2023-01-27-08-50-46.png)
 `Differens Maskinen`
 
-Ada havde rigtigt mange ideer til skøre maskiner, f.eks. nogle der kunne flyve. Hendes mor ville også gerne have hun lavede sine lektier, specielt matemetik. Hun endte med at elske matematik og læste en masse om det. Derfor hørte hun om Charles Babbage, der havde `opfundet en maskine` så man kunne `regne meget hurtigere` end i hovedet og på parpir. Den hed `differens maskinen` og skulle laves af mange tons af metal og tusindvis af tandhul. Ada var fascineret brugte mange timer på at studere differens maskinen. I 1843 `opfandt Ada` ideen om at ændre funktionen af den med `specielle instruktioner` skrevet på hul-kort. Ada Lovelace var den `første computer programmør`. 
+Ada havde rigtigt mange ideer til skøre maskiner, f.eks. nogle der kunne flyve. Hendes mor ville også gerne have hun lavede sine lektier, specielt matemetik. Hun endte med at elske matematik og læste en masse om det. Derfor hørte hun om Charles Babbage, der havde `opfundet en maskine` så man kunne `regne meget hurtigere` end i hovedet og på parpir. Den hed `differens maskinen` og skulle laves af mange tons af metal og tusindvis af tandhul. Ada var fascineret brugte mange timer på at studere differens maskinen. I 1843 `opfandt Ada` ideen om at ændre funktionen af den med `en serie af specielle instruktioner`på hul kort. Rækkefølgen og hul eller mellemrum var instruktionerne. 
+
+Ada Lovelace var den `første computer programmør`. 
+
+|   |   |
+|---|---|
+|![](2023-01-31-06-36-28.png) `Det første computer program, skrevet af Ada` |![](2023-01-31-06-34-23.png) `Hul-kort fra 80'erne`|
 
 ---
 
@@ -207,7 +213,7 @@ Til sidst lægger vi et `beskyttende lag` på mikrochippen der gør den ligner e
 
 <span style="color:white">
 
-Det firma jeg arbejder for designer processorer. `Vores opfindelse` er et design til processorer der er så små at vi kan have en `computer i lommen` - en smartphone.  
+`Det firma jeg arbejder for designer processorer`. Vores `opfindelse` er et design til processorer der er så små at vi kan have en `computer i lommen` - en smartphone.  
 
 En computer er rigtigt mange forskellige opfindelser lavet at mange `dygtige personer`. Områder som `kemi, elektronik og mekanik` har været vigtige for a bygge computeren . Programmerne der styrer computeren er ligeså vigtige og bygger på områder som `logik, sprog og matematik`. 
 
@@ -220,15 +226,5 @@ Mange opfindelser er gort ved hjælp af computere lad os tænke på hvorden vi 
 <span style="color:black">
 
 ## Mange tak! 
-
-
-```
-Materiale liste:
-
-Raspberry pi
-Tablet 
-Sand i kolbe
-Ledning / kobber
-```
 
 
